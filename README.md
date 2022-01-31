@@ -23,3 +23,20 @@ for (test_df, sample_prediction_df) in iter_test:
     sample_prediction_df['target'] = 0  # make your predictions here
     env.predict(sample_prediction_df)   # register your predictions
 ```
+
+# Data description
+
+実際の投資案件の履歴データから作成された特徴量を含んだデータセットである。
+このコンペでは、投資の意思決定に関連する難解な(obfuscated)評価指標の値を予測するのが目的である。
+時系列解析を行うコードコンペである。
+
+## Files
+### train.csv
+
+- `row_id` : row を同定するユニークなID
+- `time_id` : データのかたまりを表すID？ 
+- `investment_id` : 投資のIDコード
+- `target` : 目標変数
+- `[f_0:f_299]` : データから集められた匿名化されたデータ
+
+
