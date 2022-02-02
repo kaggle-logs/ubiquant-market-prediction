@@ -30,8 +30,8 @@ for (test_df, sample_prediction_df) in iter_test:
 このコンペでは、投資の意思決定に関連する難解な(obfuscated)評価指標の値を予測するのが目的である。
 時系列解析を行うコードコンペである。
 
-## Files
-### train.csv
+# Files
+## train.csv
 
 - `row_id` : row を同定するユニークなID
 - `time_id` : データのかたまりを表すID？ 
@@ -39,4 +39,14 @@ for (test_df, sample_prediction_df) in iter_test:
 - `target` : 目標変数
 - `[f_0:f_299]` : データから集められた匿名化されたデータ
 
+
+### EDA
+
+- row_id は `X_Y` という形式で、おそらく `time_id` + `investment_id` の複合キーになっている
+- row_id, investment_id は連続しない
+- target, f_XX は標準化されている？値であり、匿名化されている
+
+## example_sample
+
+example_test で `target` 以外の情報が渡され、`row_id`, `time_id`, `target` という列の順で提出用データを作成する。
 
